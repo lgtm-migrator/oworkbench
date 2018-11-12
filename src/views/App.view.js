@@ -8,7 +8,6 @@ export default class App extends JSView {
   }
 
   createContent(controller) {
-    this.addStyleClass(controller.getOwnerComponent().getContentDensityClass());
     return new Application({ id: "app" });
   }
 

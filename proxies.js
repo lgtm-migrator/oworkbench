@@ -1,4 +1,4 @@
-const proxy = require('http-proxy-middleware');
+const proxy = require("http-proxy-middleware");
 
 module.exports =
   /**
@@ -10,14 +10,14 @@ module.exports =
     proxy("/resources", {
       target: "https://openui5.hana.ondemand.com",
       changeOrigin: true,
-      onProxyRes: function (p) {
+      onProxyRes: function(p) {
         p.headers["cache-control"] = "public, max-age=31536000";
       }
     }),
     proxy("/test-resources", {
       target: "https://openui5.hana.ondemand.com",
       changeOrigin: true,
-      onProxyRes: function (p) {
+      onProxyRes: function(p) {
         p.headers["cache-control"] = "public, max-age=31536000";
       }
     }),
@@ -28,7 +28,7 @@ module.exports =
       // with http basic auth if necessary
       auth: "username:password",
       pathRewrite: {
-        '^/destinations/northwind': '/'
+        "^/destinations/northwind": "/"
       },
       changeOrigin: true
     })

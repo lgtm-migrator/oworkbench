@@ -6,6 +6,7 @@
       {
         "namespace": "org.fornever.odata.workbench"
       }
-    ]
+    ],
+    "babel-preset-flow"
   ]
 }

@@ -4,18 +4,15 @@ import SideNavigation from "sap/tnt/SideNavigation";
 import NavigationList from "sap/tnt/NavigationList";
 import NavigationListItem from "sap/tnt/NavigationListItem";
 import App from "sap/m/App";
-import { connect, store } from "../boot/store";
+import { connect } from "../boot/store";
 
-export default class Overview extends JSView {
-
+@connect(state => state.overview)
+class Overview extends JSView {
   init() {
-    this.setModel(connect(state => state.overview));
-
     setInterval(() => {
-      store.dispatch({ type: "INC" });
+      this.dispatch({ type: "INC" });
     }, 1000);
   }
-
 
   createContent() {
     return (
@@ -43,3 +40,5 @@ export default class Overview extends JSView {
     );
   }
 }
+
+export default Overview;

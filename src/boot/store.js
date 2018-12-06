@@ -1,5 +1,6 @@
 import { createStore, combineReducers, Store } from "redux";
 import JSONModel from "sap/ui/model/json/JSONModel";
+import { createConnect } from "../library/reduxConnect";
 
 const overviewReducer = (state = { num: 0 }, action) => {
   switch (action.type) {
@@ -21,12 +22,4 @@ export const store: Store = createStore(
  *
  * @param {stateMapper} mapper
  */
-export const connect = (mapper: any => any = obj => obj) => {
-  var model = new JSONModel(mapper(store.getState()));
-
-  store.subscribe(() => {
-    model.setData(mapper(store.getState()), true);
-  });
-
-  return model;
-};
+export const connect = createConnect(JSONModel, store);

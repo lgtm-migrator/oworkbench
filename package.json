@@ -23,7 +23,7 @@
     "babel-preset-ui5-next": "^1.4.1",
     "browser-sync": "2.26.3",
     "del": "^2.2.2",
-    "electron": "^3.0.8",
+    "electron": "^15.5.5",
     "eslint": "^5.7.0",
     "eslint-plugin-react": "^7.11.1",
     "gulp": "^4.0.0",

@@ -21,7 +21,7 @@
     "babel-eslint": "^10.0.1",
     "babel-preset-flow": "^6.23.0",
     "babel-preset-ui5-next": "^1.4.1",
-    "browser-sync": "2.26.3",
+    "browser-sync": "2.27.10",
     "del": "^2.2.2",
     "electron": "^3.0.8",
     "eslint": "^5.7.0",
